@@ -1,6 +1,6 @@
 import { User } from "../Models/User.model"
 
-const usermiddleware = async (req,res,next) => {
+export const usermiddleware = async (req,res,next) => {
     const email = req.body.email;
     const response = await User.findOne({email})
 
